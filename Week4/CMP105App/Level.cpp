@@ -11,7 +11,15 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	testSprite.setTexture(&texture);
 	testSprite.setSize(sf::Vector2f(100, 100));
 	testSprite.setPosition(100, 100);
+	testSprite.setInput(input);
 
+	gompBahh.loadFromFile("gfx/Goomba.png");
+
+	OOmpaLooMPa.setTexture(&gompBahh);
+	OOmpaLooMPa.setSize(sf::Vector2f(100, 100));
+	OOmpaLooMPa.setPosition(100, 100);
+	OOmpaLooMPa.setVelocity(5, 5);
+	OOmpaLooMPa.setInput(input);
 }
 
 Level::~Level()
@@ -27,6 +35,8 @@ void Level::handleInput(float dt)
 	{
 		window->close();
 	}
+	//now I dealt with level inputs, I want to deal with player specific inputs
+	testSprite.handleInput(dt);
 
 }
 
@@ -42,6 +52,7 @@ void Level::render()
 	beginDraw();
 
 	window->draw(testSprite);
+	window->draw(gompBahh);
 
 	endDraw();
 }

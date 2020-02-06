@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
+#include "Player.h"
 #include <string.h>
 #include <iostream>
 
@@ -26,7 +27,10 @@ private:
 	Input* input;
 
 	// Level objects
-	GameObject testSprite;
+	Player testSprite;
+	GameObject OOmpaLooMPa;
+
 	sf::Texture texture;
+	sf::Texture gompBahh;
 
 };
