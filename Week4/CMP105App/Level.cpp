@@ -1,4 +1,6 @@
 #include "Level.h"
+#include "Emeney.cpp"
+#include "Emeney.h"
 
 Level::Level(sf::RenderWindow* hwnd, Input* in)
 {
@@ -43,7 +45,7 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-	
+	OOmpaLooMPa.update(dt);
 }
 
 // Render level
@@ -52,7 +54,7 @@ void Level::render()
 	beginDraw();
 
 	window->draw(testSprite);
-	window->draw(gompBahh);
+	window->draw(OOmpaLooMPa);
 
 	endDraw();
 }

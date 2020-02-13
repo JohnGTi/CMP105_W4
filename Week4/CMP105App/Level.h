@@ -32,5 +32,4 @@ private:
 
 	sf::Texture texture;
 	sf::Texture gompBahh;
-
 };
