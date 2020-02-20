@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
+#include "Cursor.h"
+#include "Background.h"
 #include <string.h>
 #include <iostream>
 
@@ -29,4 +31,9 @@ private:
 	GameObject testSprite;
 	sf::Texture texture;
 
+	Cursor moiseCoisur;
+	sf::Texture cursorImg;
+
+	Background levelBackground;
+	sf::Texture bgArt;
 };
